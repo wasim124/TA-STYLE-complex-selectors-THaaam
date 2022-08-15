@@ -1,0 +1,545 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/** custom css **/
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+input, button, textarea {
+    box-shadow: none;
+    outline: 0;
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*variables*/
+:root {
+    --primary: rgb(89, 191, 194);
+    --textDark: rgb(40, 62, 125);
+    --textLight: rgb(147, 160, 189);
+    --textWhite: rgb(255, 255, 255);
+    --bg: rgb(223, 236, 255);
+}
+
+/** Genral **/
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    color: var(--textLight);
+    font-size: 1.4rem;
+    padding-bottom: 200px;
+}
+
+
+
+.container {
+    max-width: 1380px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.padding {
+    padding: 5rem 0;
+}
+
+/*flex*/
+
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.item-start {
+    align-items: flex-start;
+}
+
+.item-stretch {
+    align-items: stretch;
+}
+
+.item-center {
+    align-items: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+/*****/
+
+.flex-15 {
+    flex: 0 1 15%;
+}
+
+.flex-20 {
+    flex: 0 1 20%;
+}
+
+.flex-25 {
+    flex: 0 1 25%;
+}
+
+
+.flex-30 {
+    flex: 0 1 30%;
+}
+
+.flex-48 {
+    flex: 0 1 48%;
+}
+
+.flex-50 {
+    flex: 0 1 50%;
+}
+
+.flex-60 {
+    flex: 0 1 60%;
+}
+
+
+.grow {
+
+    flex: 1 1 auto;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*button*/
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    background-color: var(--primary);
+    color: #ffffff;
+    border-radius: 4px;
+    transition: all 200ms ease-in-out;
+}
+
+.btn:hover {
+    box-shadow: 0 2px 6 px rgba(0, 0, 0, 0.3);
+    opacity: 0.8;
+    color: var(--primary) !important;
+}
+
+/*text*/
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.font-0 {
+    font-size: 0;
+}
+
+.width-full {
+    width: 100%;
+}
+
+/**heading**/
+
+.heading {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--textDark);
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+
+.heading-secondary {
+    font-size: 2.2rem;
+    color: var(--textDark);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/**navbar**/
+.navbar {
+    padding: 1rem 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.brand {
+    font-size: 2rem;
+    color: var(--textWhite);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.nav-item {
+    margin-left: 2rem;
+}
+
+.nav a {
+    color: var(--textWhite);
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.nav a :hover {
+    color: var(--primary);
+}
+
+/**hero**/
+.hero {
+    background-color: var(--primary);
+    height: 100vh;
+}
+
+.hero-heading {
+    padding-top: 14rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    color: var(--textWhite);
+}
+
+.btn-primary {
+    background-color: var(--textWhite);
+    color: var(--textDark);
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+
+.relative {
+    position: absolute;
+    top: 50%;
+    left: 22%;
+
+}
+
+.hero img {
+    width: 55%;
+}
+
+/**file**/
+.files {
+    padding-top: 9rem;
+
+}
+
+.files ul {
+    margin-top: 8rem;
+    padding-bottom: 4rem;
+    border-bottom: 2px solid var(--textLight);
+}
+
+.files ul li {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #BFCAE1;
+    vertical-align: middle;
+}
+
+.files ul li img {
+    margin-right: 1rem;
+}
+
+
+/**learning**/
+
+.learning h3 {
+    font-size: 2.7rem;
+    font-weight: 700;
+    padding-right: 9rem;
+}
+
+.learning p {
+    font-size: 1.7rem;
+    color: #8798bd;
+
+}
+
+.learn {
+    clip-path: polygon(75% 0%, 88% 49%, 75% 100%, 0% 100%, 7% 52%, 0% 0%);
+    padding: 1rem 4rem;
+    width: 18rem;
+    background-color: var(--primary);
+    display: inline-block
+}
+
+.learn {
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 1rem;
+
+}
+
+/**score**/
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--textLight);
+    margin-bottom: 4rem;
+}
+
+th {
+    color: #ffffff;
+    background-color: var(--primary);
+}
+
+tr:nth-last-of-type(2n+0) {
+    background-color: #D5E5E5;
+
+}
+
+table, th, td {
+    border: 1px solid var(--textLight);
+}
+
+th {
+    border: none;
+}
+
+th, td {
+    padding: 1rem;
+}
+
+/**join**/
+
+.on-off {
+    width: 5rem;
+    height: 2rem;
+    border-radius: 1.3rem;
+    background-color: #bbecec;
+    margin: 0 1rem;
+    padding-left: 0.5rem;
+}
+
+.circle {
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: #ffffff;
+}
+
+.circle span {
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.join h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--textDark);
+}
+
+.basic {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.8rem;
+    border: 4px solid #E8EEFB;
+    border-radius: 1.5rem;
+    color: #42517B;
+}
+
+.basic p {
+    padding: 1rem;
+    color: #677CAB;
+}
+
+.basic h3 {
+    border-bottom: 2px solid #E8EEFB;
+    padding-bottom: 2rem;
+}
+
+.basic li {
+    padding-top: 1.5rem;
+    text-align: start;
+}
+
+.basic li img {
+    margin-right: 1.2rem;
+}
+
+.basic a {
+    padding: 1rem 2rem;
+    width: 100%;
+    border: 2px solid #677CAB;
+    display: inline-block;
+    margin-top: 2rem;
+    border-radius: .8rem;
+    color: var(--text-color);
+}
+
+.get-btn {
+    background-color: var(--primary);
+    border: none !important;
+    color: white !important;
+}
+
+.basic span {
+    font-size: 4.5rem;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.basic h3::first-letter {
+    color: var(--primary);
+    font-size: 2.2rem;
+}
+
+/**trail**/
+.trial {
+    padding: 5.5rem 0;
+    margin: 6rem 0;
+    background-color: var(--primary);
+    border-radius: 3rem;
+}
+
+.trial h2 {
+    padding-bottom: 2.5rem;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.trial a {
+    width: 28%;
+    border-radius: 0.6rem;
+    font-weight: 600;
+}
+
+/**footer**/
+
+
+.icons a {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    color: white;
+    background-color: var(--primary);
+    padding: 1rem;
+    margin-right: 2rem;
+}
+
+.icons {
+    margin-top: 1rem;
+}
+
+.footer-about li {
+    font-size: 1.5rem;
+    padding-bottom: .8rem;
+    color: #677CAB;
+}
+
+.Trackl p {
+    font-size: 1.5rem;
+    padding-bottom: .8rem;
+    color: #677CAB;
+    padding-right: 3rem;
+}
+
+footer {
+    padding: 2.7rem;
+}
